@@ -1,0 +1,10 @@
+{% for art in articles %}
+    <table>
+        <tr><td></tr><h1> Titre {{ art.titre }}</h1></td></tr>
+        <tr><td><p>Slug: {{ art.slug }}</p></td></tr>
+        <tr><td><p>Auteur : {{ art.auteur }}</p></td></tr>
+        <a href="{% url "blog.views.modifier" art.id %}"> Modifier L'Article</a>
+    </table>
+    {% empty%}
+    <p>"Aucun"</p>
+{% endfor %}

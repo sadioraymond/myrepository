@@ -1,0 +1,7 @@
+{% if envoi %}Modification !{% endif %}
+<form action="{% url "blog.views.modifier" article.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit" />
+
+</form>
